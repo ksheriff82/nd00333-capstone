@@ -1,3 +1,4 @@
+
 import argparse
 import os
 import numpy as np
@@ -19,11 +20,22 @@ from azureml.core import Environment, ScriptRunConfig
 
 def clean_data(data):
     
+    
+    x_df = data.drop(["HeartDisease"], axis=1)
+    x_df["Sex"] = x_df.Sex.apply(lambda s: 1 if s == "M" else 0)
+    x_df["ChestPainType"] = x_df.ChestPainType.apply(lambda s: 0 if s == "ASY" else (1 if s == "ATA" else (2 if s == "NAP" else 3)))
+    x_df["RestingECG"] = x_df.RestingECG.apply(lambda s: 0 if s == "Normal"  else (1 if s == "ST" else 2))
+    x_df["ExerciseAngina"] = x_df.ExerciseAngina.apply(lambda s: 1 if s == "Y"  else 0)
+    x_df["ST_Slope"] = x_df.ST_Slope.apply(lambda s: 1 if s == "UP"  else(2 if s == "DOWN" else  0))
+    
+    
+    y_df = data["HeartDisease"]
+    
     # Clean and one hot encode data
-    x_df = data.to_pandas_dataframe().dropna()
+    #x_df = data.drop(HeartDisease)
     
 
-    y_df = x_df.pop("HeartDisease")
+    #y_df = x_df.pop("HeartDisease")
     return x_df, y_df
 
 def main():
@@ -46,14 +58,15 @@ def main():
     #resource_group = 'aml-quickstarts-250208'
     #workspace_name = 'quick-starts-ws-250208'
 
-    workspace = Workspace.from_config()
+    #workspace = Workspace.from_config()
 
-    dataset = Dataset.get_by_name(workspace, name='heart_rate_failure_prediction') 
+    #dataset = Dataset.get_by_name(workspace, name='heart_rate_failure_prediction') 
+    
 
     #ds = TabularDatasetFactory.from_delimited_files("https://mlstrg250208.blob.core.windows.net/azureml-blobstore-9c6e7a8b-e82f-4444-b018-b97d722da9f0/UI/2024-01-21_222438_UTC/heart.csv")  
     
-    
-    x, y = clean_data(dataset)
+    df = pd.read_csv("./heart.csv")
+    x, y = clean_data(df)
 
 
     # TODO: Split data into train and test sets.

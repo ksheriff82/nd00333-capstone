@@ -1,0 +1,57 @@
+2024-01-28 22:03:50.765 - CRITICAL - 11666 - azureml.train.automl.run.log_traceback:227 - Type: ArgumentInvalid
+Class: OnnxConvertException
+Message: OnnxConvertException:
+	Message: Requested an ONNX compatible model but the run has ONNX compatibility disabled.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Requested an ONNX compatible model but the run has ONNX compatibility disabled.",
+        "target": "onnx_compatible",
+        "inner_error": {
+            "code": "BadArgument",
+            "inner_error": {
+                "code": "ArgumentInvalid"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 622, in _get_best_child_run
+    raise OnnxConvertException._with_error(
+
+ExceptionTarget: onnx_compatible
+2024-01-28 22:03:50.780 - CRITICAL - 11666 - azureml.train.automl.run.log_traceback:227 - Type: ArgumentInvalid
+Class: OnnxConvertException
+Message: OnnxConvertException:
+	Message: Requested an ONNX compatible model but the run has ONNX compatibility disabled.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Requested an ONNX compatible model but the run has ONNX compatibility disabled.",
+        "target": "onnx_compatible",
+        "inner_error": {
+            "code": "BadArgument",
+            "inner_error": {
+                "code": "ArgumentInvalid"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 707, in get_output
+    curr_run, model_name = self._get_best_child_run(
+  File "run.py", line 622, in _get_best_child_run
+    raise OnnxConvertException._with_error(
+
+ExceptionTarget: onnx_compatible
+2024-01-28 22:04:26.052 - WARNING - 11666 - azureml.training.tabular.models._timeseries._prophet_model.<module>:32 - Unable to import prophet.
+2024-01-28 22:04:28.857 - INFO - 11666 - azureml.automl.runtime.featurization.data_transformer.__init__:190 - Feature sweeping enabled: False
+2024-01-28 22:04:28.858 - INFO - 11666 - azureml.automl.runtime.featurization.data_transformer.__init__:191 - Feature sweeping timeout: 86400
