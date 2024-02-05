@@ -118,5 +118,4 @@ The service is deployed as real time webservice with the name myservice. Below a
 
 ## Screen Recording
 https://www.youtube.com/watch?v=8fM_8FqDgmA
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+
