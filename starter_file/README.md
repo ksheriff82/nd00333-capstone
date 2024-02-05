@@ -114,8 +114,16 @@ The service is deployed as real time webservice with the name myservice. Below a
 
 ![Screenshot 2024-02-04 210841](https://github.com/ksheriff82/nd00333-capstone/assets/43680905/a82adc24-425a-4561-80e0-f680b8c7a1b9)
 
+Below are the service urls for the deployed service
+![service_urls](https://github.com/ksheriff82/nd00333-capstone/assets/43680905/9fc4ed1a-ac78-4305-8f76-0ed09bc34c16)
 
+Below is the screenshot that represents the request that is being submitted to the service as POST http request
 
-## Screen Recording[
+![requestm_model](https://github.com/ksheriff82/nd00333-capstone/assets/43680905/f41fb2f4-f797-4e28-ad62-995d79a0ccf2)
+
+Below is the screenshot of the results we obtained from the service
+![results](https://github.com/ksheriff82/nd00333-capstone/assets/43680905/5b8ddc56-ecbe-4fbd-865a-a49f2b8eddc3)
+
+## Screen Recording
 https://youtu.be/LE8Z17HKH6Y
 
