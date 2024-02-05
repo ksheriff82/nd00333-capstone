@@ -1,6 +1,6 @@
 *NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
 
-# Your Project Title Here
+Heart Disease Prediction
 
 This capstone project is for creating the model using azure ml and hyper drive. This project uses the heard disease dataset from kaggle and uses azure studio for creating the model and use the best model for deployment and uses the model to predict the heart disease possibilities for given data.
 
